@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { CoffeeContribution } from './coffee-contribution';
 
 @Component({
   selector: 'app-root',
@@ -7,12 +8,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Coffee Choicer';
+  
+  // _email, _quantity, _createdOn
 
-list = ['Daniel','Rodrigo', 'Matheus']
+  list = [new CoffeeContribution("teste@teste",1, new Date("06/11/2018"))]
+  
+  @Input()
+  
 
-  onButtonClick(): void{
-    alert('add');
-  }
+  
+  
 
   getUrl()
 {

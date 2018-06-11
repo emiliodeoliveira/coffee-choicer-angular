@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="./assets/css/bootstrap.css">
+<div class="tabelanomes">
+    <table class="table"  *ngFor="let cc of list">
+        <thead>
+          <tr>
+            <th>E-mail</th>
+            <th>Quantidade</th>
+            <th>Data</th>
+        </tr>
+        <tr>
+            <td>{{cc.email}}</td>
+            <td>{{cc.quantity}}</td>
+            <td>{{cc.createdOn | date:forma}}</td>
+        </tr>
+      </thead>
+      </table> 
+<div class="listanomes">
+  <ol>
+  <li font-style="Arial" *ngFor="let i of list"> {{ i|json }}</li>
+</ol>
+</div>

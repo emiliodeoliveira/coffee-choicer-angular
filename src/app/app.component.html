@@ -1,13 +1,12 @@
 <!--The content below is only a placeholder and can be replaced.-->
+<app-coffee-contribution-crud></app-coffee-contribution-crud>
+<link rel="stylesheet" href="./assets/css/bootstrap.css">
+<body>
 <div id="wrapper">
   <div class="header">
     <div class="i1">
-    <img src="/assets/img/logo.png" alt="Logo">
-  </div> 
-<!-- 
-  <div class="ad">
-      <img src="/assets/img/dell-web-project-banner.jpg" alt="Logo">
-    </div>  -->
+      <img src="/assets/img/logo.png" alt="Logo">
+    </div> 
   </div>
   <ul>
     <li><a href="#home">Home</a></li>
@@ -16,28 +15,10 @@
     <li style="float:right"><a class="active" href="#about">Sobre</a></li>
   </ul>  
   <div style="text-align:center">
-  <h1>
+  <h2>
     Welcome to {{ title }}!<BR>
-  </h1>
-<div class="form">
-  <h3>Insira os dados da entrega:</h3>
-  <form>
-    Nome:<br>
-    <input type="text" name="firstname"><br>
-    Produto:<br>
-    <input type="text" name="lastname"><br>
-    Data:<br>
-    <input type="date" name="lastname">
-  </form>
-  <br>
-  <button class="button1" (click)="onButtonClick()">Enviar</button>
-</div>
-<div class="listanomes">
-  <ol>
-  <li font-style="Arial" *ngFor="let i of list"> {{ i }}</li>
-</ol>
-</div>
-
-</div>
-
-
+  </h2>
+  <app-coffee-form-submit></app-coffee-form-submit>
+  <app-coffee-list-contributions></app-coffee-list-contributions>
+</div></div>
+</body>
