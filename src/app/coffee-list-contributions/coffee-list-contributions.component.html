@@ -1,21 +1,29 @@
 <link rel="stylesheet" href="./assets/css/bootstrap.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="tabelanomes">
-    <table class="table"  *ngFor="let cc of list">
-        <thead>
-          <tr>
-            <th>E-mail</th>
-            <th>Quantidade</th>
-            <th>Data</th>
-        </tr>
-        <tr>
-            <td>{{cc.email}}</td>
-            <td>{{cc.quantity}}</td>
-            <td>{{cc.createdOn | date:forma}}</td>
-        </tr>
-      </thead>
-      </table> 
-<div class="listanomes">
-  <ol>
-  <li font-style="Arial" *ngFor="let i of list"> {{ i|json }}</li>
-</ol>
-</div>
+  <BR>
+  <h5>Lista de usuários:</h5>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>E-mail</th>
+        <th>Quantidade</th>
+        <th>Data</th>
+      </tr>
+      <tr *ngFor="let cc of list">
+        <td>{{cc.name}}</td>
+        <td>{{cc.email}}</td>
+        <td>{{cc.quantity}}</td>
+        <td>{{cc.createdOn | date:format}}</td>
+        <td><button class="btn" (click)="onItemDeleted($cc)"><i class="fa fa-trash"></i></button></td>
+      </tr>
+    </thead>
+  </table>
+  <div class="listanomes">
+    <!-- JSON para fins de teste
+      <ol>
+      <li font-style="Arial" *ngFor="let i of list"> {{ i |json }}</li>
+    </ol>
+  -->
+  </div>

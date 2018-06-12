@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { CoffeeContributionCrudComponent } from './coffee-contribution-crud/coffee-contribution-crud.component';
@@ -14,7 +15,8 @@ import { CoffeeListContributionsComponent } from './coffee-list-contributions/co
     CoffeeListContributionsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, 
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

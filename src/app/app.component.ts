@@ -11,17 +11,16 @@ export class AppComponent {
   
   // _email, _quantity, _createdOn
 
-  list = [new CoffeeContribution("teste@teste",1, new Date("06/11/2018"))]
+  list = []
   
-  @Input()
-  
-
-  
-  
-
   getUrl()
 {
   return "url('/assets/img/coffee.jpg')";
 }
+
+onCreated(coffee){
+  this.list.push(coffee);
+}
+
     
 }

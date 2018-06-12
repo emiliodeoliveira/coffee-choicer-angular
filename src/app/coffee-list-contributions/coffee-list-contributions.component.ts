@@ -1,23 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { CoffeeContribution } from '../coffee-contribution';
-
 
 @Component({
   selector: 'app-coffee-list-contributions',
   templateUrl: './coffee-list-contributions.component.html',
   styleUrls: ['./coffee-list-contributions.component.css']
 })
-export class CoffeeListContributionsComponent extends CoffeeContribution {
+export class CoffeeListContributionsComponent implements OnInit {
+  @Input()
+  list: Array<CoffeeContribution> = [];
 
-  constructor() {
-    super();
-  }
+  @Output()
+  created = new EventEmitter<CoffeeContribution>();
 
-  ngOnInit() {
-  }
+  constructor() { }
 
-   // _email, _quantity, _createdOn
+  ngOnInit() { }
 
-   list = [new CoffeeContribution("teste@teste",1, new Date("06/11/2018"))]
+  // _email, _quantity, _createdOn
 
+  onCreated() { }
+
+  onItemDeleted(index){ 
+    this.list.splice(index, 1); 
+}
 }

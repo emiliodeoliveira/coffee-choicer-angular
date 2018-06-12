@@ -2,23 +2,33 @@
 <app-coffee-contribution-crud></app-coffee-contribution-crud>
 <link rel="stylesheet" href="./assets/css/bootstrap.css">
 <body>
-<div id="wrapper">
-  <div class="header">
-    <div class="i1">
-      <img src="/assets/img/logo.png" alt="Logo">
-    </div> 
+  <div id="wrapper">
+    <div class="header">
+      <div class="i1">
+        <img src="/assets/img/logo.png" alt="Logo">
+      </div>
+    </div>
+    <ul>
+      <li>
+        <a href="#home">Home</a>
+      </li>
+      <li>
+        <a href="#usuarios">Usuários</a>
+      </li>
+      <li>
+        <a href="#calendario">Calendario</a>
+      </li>
+      <li style="float:right">
+        <a class="active" href="#about">Sobre</a>
+      </li>
+    </ul>
+    <div style="text-align:center">
+      <h2>
+        Welcome to {{ title }}!
+        <BR>
+      </h2>
+      <app-coffee-form-submit (created)="onCreated($event)"></app-coffee-form-submit>
+      <app-coffee-list-contributions [list] = "list"></app-coffee-list-contributions>
+    </div>
   </div>
-  <ul>
-    <li><a href="#home">Home</a></li>
-    <li><a href="#usuarios">Usuários</a></li>
-    <li><a href="#calendario">Calendario</a></li>
-    <li style="float:right"><a class="active" href="#about">Sobre</a></li>
-  </ul>  
-  <div style="text-align:center">
-  <h2>
-    Welcome to {{ title }}!<BR>
-  </h2>
-  <app-coffee-form-submit></app-coffee-form-submit>
-  <app-coffee-list-contributions></app-coffee-list-contributions>
-</div></div>
 </body>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { CoffeeContribution } from '../coffee-contribution';
 
 @Component({
   selector: 'app-coffee-form-submit',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CoffeeFormSubmitComponent implements OnInit {
 
+  
+  @Output() created = new EventEmitter<CoffeeContribution>();
   constructor() { }
 
   ngOnInit() {
   }
 
+  coffee = new CoffeeContribution();
+  onButtonClick() {
+    this.created.emit(this.coffee);
+    this.coffee = new CoffeeContribution();
+  }
 }
