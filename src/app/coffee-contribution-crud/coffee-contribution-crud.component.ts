@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CoffeeContribution } from '../coffee-contribution';
 
 @Component({
   selector: 'app-coffee-contribution-crud',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./coffee-contribution-crud.component.css']
 })
 export class CoffeeContributionCrudComponent implements OnInit {
-
+  list = []
   constructor() { }
 
   ngOnInit() {
   }
 
+  onCreated(coffee) {
+    this.list.push(coffee);
+  }
 }
