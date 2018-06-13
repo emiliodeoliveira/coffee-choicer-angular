@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CoffeeContribution } from '../coffee-contribution';
+
 
 @Component({
   selector: 'app-coffee-contribution-report',
@@ -6,10 +8,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./coffee-contribution-report.component.css']
 })
 export class CoffeeContributionReportComponent implements OnInit {
-
+  
   constructor() { }
 
   ngOnInit() {
   }
-
+  
+  /*verificaMaior() {
+    var a = 0;
+    for (var _i = 0; _i < contributions.length; _i++) {
+      if (contributions[_i].quantity > a){
+        a = contributions[_i];
+      }
+      console.log(item);
+    }
+  }*/
 }

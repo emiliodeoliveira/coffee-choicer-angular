@@ -9,10 +9,10 @@ import { CoffeeContribution } from '../coffee-contribution';
 export class CoffeeListContributionsComponent implements OnInit {
   @Input()
   list: Array<CoffeeContribution> = [];
-
-  @Output()
-  created = new EventEmitter<CoffeeContribution>();
-
+  /*
+    @Output()
+    created = new EventEmitter<CoffeeContribution>();
+  */
   constructor() { }
 
   ngOnInit() { }
@@ -21,7 +21,7 @@ export class CoffeeListContributionsComponent implements OnInit {
 
   onCreated() { }
 
-  onItemDeleted(index){ 
-    this.list.splice(index, 1); 
-}
+  onItemDeleted(index) {
+    this.list.splice(index, 1);
+  }
 }

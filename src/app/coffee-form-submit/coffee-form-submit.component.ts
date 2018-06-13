@@ -1,5 +1,6 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 import { CoffeeContribution } from '../coffee-contribution';
+import { CoffeeContributionDataService } from '../coffee-contribution-data.service';
 
 @Component({
   selector: 'app-coffee-form-submit',
@@ -8,7 +9,6 @@ import { CoffeeContribution } from '../coffee-contribution';
 })
 export class CoffeeFormSubmitComponent implements OnInit {
 
-  
   @Output() created = new EventEmitter<CoffeeContribution>();
   constructor() { }
 
@@ -16,6 +16,7 @@ export class CoffeeFormSubmitComponent implements OnInit {
   }
 
   coffee = new CoffeeContribution();
+
   onButtonClick() {
     this.created.emit(this.coffee);
     this.coffee = new CoffeeContribution();
