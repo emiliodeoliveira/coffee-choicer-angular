@@ -1,7 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<!--
 <app-coffee-contribution-crud></app-coffee-contribution-crud>
--->
 <link rel="stylesheet" href="./assets/css/bootstrap.css">
 <body>
   <div id="wrapper">
@@ -24,13 +22,14 @@
         <a class="active" href="#about">Sobre</a>
       </li>
     </ul>
-    <div>
-      <h2 style="text-align:center">
+    <div style="text-align:center">
+      <h2>
         Welcome to {{ title }}!
         <BR>
       </h2>
       <app-coffee-form-submit (created)="onCreated($event)"></app-coffee-form-submit>
       <app-coffee-list-contributions [list] = "list"></app-coffee-list-contributions>
+      <app-coffee-contribution-report></app-coffee-contribution-report>
     </div>
   </div>
 </body>
