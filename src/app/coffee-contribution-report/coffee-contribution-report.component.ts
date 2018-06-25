@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { CoffeeContribution } from '../coffee-contribution';
-
+import { CoffeeContributionDataService } from '../coffee-contribution-data.service';
 
 @Component({
   selector: 'app-coffee-contribution-report',
@@ -8,8 +8,13 @@ import { CoffeeContribution } from '../coffee-contribution';
   styleUrls: ['./coffee-contribution-report.component.css']
 })
 export class CoffeeContributionReportComponent implements OnInit {
+  contributions: CoffeeContribution[];
+  @Input()
+  list: Array<CoffeeContribution> = [];
   
-  constructor() { }
+  constructor(coffeeConntributionService: CoffeeContributionDataService) { 
+    this.contributions = coffeeConntributionService.getData();
+  }
 
   ngOnInit() {
   }

@@ -17,8 +17,6 @@ export class CoffeeListContributionsComponent implements OnInit {
 
   ngOnInit() { }
 
-  // _email, _quantity, _createdOn
-
   onCreated() { }
 
   onItemDeleted(index) {

@@ -8,6 +8,8 @@ import { CoffeeFormSubmitComponent } from './coffee-form-submit/coffee-form-subm
 import { CoffeeListContributionsComponent } from './coffee-list-contributions/coffee-list-contributions.component';
 import { CoffeeContributionReportComponent } from './coffee-contribution-report/coffee-contribution-report.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { CoffeeChartTopcontributorsComponent } from './coffee-chart-topcontributors/coffee-chart-topcontributors.component';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +17,8 @@ import { AppRoutingModule } from './/app-routing.module';
     CoffeeContributionCrudComponent,
     CoffeeFormSubmitComponent,
     CoffeeListContributionsComponent,
-    CoffeeContributionReportComponent
+    CoffeeContributionReportComponent,
+    CoffeeChartTopcontributorsComponent
   ],
   imports: 
   [       
